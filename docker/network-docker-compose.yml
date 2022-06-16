@@ -1,0 +1,11 @@
+version: '3'
+
+networks:
+  attmod:
+    driver: bridge
+
+services:
+  service-name:
+    ...
+    networks:
+      - attmod

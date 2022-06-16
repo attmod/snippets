@@ -1,0 +1,10 @@
+ARG DOCKER_IMAGE
+FROM $DOCKER_IMAGE
+
+USER root
+COPY * /workdir/
+RUN chown docky /workdir/*
+
+USER docky
+RUN vdir /workdir
+CMD '/workdir/init.sh'
